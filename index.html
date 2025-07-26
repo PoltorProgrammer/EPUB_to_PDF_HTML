@@ -1,1 +1,67 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor EPUB a PDF</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Convertidor EPUB a PDF</h1>
+            <p>Convierte tus libros EPUB a formato PDF de manera rápida y sencilla</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📁</div>
+                    <h3>Arrastra tu archivo EPUB aquí</h3>
+                    <p>o haz clic para seleccionar</p>
+                    <input type="file" id="fileInput" accept=".epub" hidden>
+                </div>
+            </div>
+
+            <div class="file-info" id="fileInfo" style="display: none;">
+                <div class="file-details">
+                    <h3>📖 Archivo seleccionado:</h3>
+                    <p id="fileName"></p>
+                    <p id="fileSize"></p>
+                </div>
+                <button id="convertBtn" class="convert-btn">
+                    <span id="convertText">🔄 Convertir a PDF</span>
+                    <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+                </button>
+            </div>
+
+            <div class="progress-section" id="progressSection" style="display: none;">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p id="progressText">Procesando archivo...</p>
+            </div>
+
+            <div class="result-section" id="resultSection" style="display: none;">
+                <div class="success-message">
+                    <h3>✅ ¡Conversión completada!</h3>
+                    <p>Tu archivo está listo para descargar en ambos formatos</p>
+                    <div class="download-buttons">
+                        <button id="downloadPdfBtn" class="download-btn">📥 Descargar PDF</button>
+                        <button id="downloadHtmlBtn" class="download-btn html-btn">🌐 Descargar HTML</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Convierte archivos EPUB a PDF directamente en tu navegador</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
