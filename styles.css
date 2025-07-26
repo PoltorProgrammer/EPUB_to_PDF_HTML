@@ -197,18 +197,11 @@ main {
     margin-bottom: 20px;
 }
 
-.download-buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.html-btn {
+.download-btn {
     background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
 }
 
-.html-btn:hover {
+.download-btn:hover {
     box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
 }
 
