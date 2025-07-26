@@ -1,19 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convertidor EPUB a PDF</title>
+    <title>Convertidor EPUB a HTML</title>
+    <link rel="icon" type="image/png" href="https://images.emojiterra.com/google/android-12l/512px/1f4da.png">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>📚 Convertidor EPUB a PDF</h1>
-            <p>Convierte tus libros EPUB a formato PDF de manera rápida y sencilla</p>
+            <h1>📚 Convertidor EPUB a HTML</h1>
+            <p>Convierte tus libros EPUB a formato HTML para visualización web</p>
         </header>
 
         <main>
@@ -33,7 +32,7 @@
                     <p id="fileSize"></p>
                 </div>
                 <button id="convertBtn" class="convert-btn">
-                    <span id="convertText">🔄 Convertir a PDF</span>
+                    <span id="convertText">🔄 Convertir a HTML</span>
                     <div id="loadingSpinner" class="spinner" style="display: none;"></div>
                 </button>
             </div>
@@ -48,17 +47,14 @@
             <div class="result-section" id="resultSection" style="display: none;">
                 <div class="success-message">
                     <h3>✅ ¡Conversión completada!</h3>
-                    <p>Tu archivo está listo para descargar en ambos formatos</p>
-                    <div class="download-buttons">
-                        <button id="downloadPdfBtn" class="download-btn">📥 Descargar PDF</button>
-                        <button id="downloadHtmlBtn" class="download-btn html-btn">🌐 Descargar HTML</button>
-                    </div>
+                    <p>Tu archivo HTML está listo para descargar</p>
+                    <button id="downloadHtmlBtn" class="download-btn">🌐 Descargar HTML</button>
                 </div>
             </div>
         </main>
 
         <footer>
-            <p>Convierte archivos EPUB a PDF directamente en tu navegador</p>
+            <p>Convierte archivos EPUB a HTML con portada e índice navegable</p>
         </footer>
     </div>
 
